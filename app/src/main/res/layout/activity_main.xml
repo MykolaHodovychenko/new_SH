@@ -1,0 +1,109 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:background="@drawable/bg_repeat">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="70px"
+        android:background="#3e6372">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Главное меню"
+            android:id="@+id/header_title"
+            android:textColor="#fafaff"
+            android:textSize="30sp"
+            android:layout_centerInParent="true" />
+
+        <ImageView
+            android:layout_width="60px"
+            android:layout_height="60px"
+            android:id="@+id/imageView"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/plug_off"
+            android:layout_alignParentEnd="false"
+            android:layout_marginRight="10dp"
+            android:scaleType="centerCrop" />
+
+        <ImageView
+            android:layout_width="60px"
+            android:layout_height="60px"
+            android:id="@+id/imageView2"
+            android:layout_alignParentRight="false"
+            android:layout_centerVertical="true"
+            android:src="@drawable/usb_off"
+            android:layout_alignParentEnd="false"
+            android:layout_marginRight="10dp"
+            android:scaleType="fitCenter"
+            android:layout_toLeftOf="@+id/imageView" />
+
+        <ImageView
+            android:layout_width="60px"
+            android:layout_height="60px"
+            android:id="@+id/imageView3"
+            android:layout_alignParentRight="false"
+            android:layout_centerVertical="true"
+            android:src="@drawable/no_mail"
+            android:layout_alignParentEnd="false"
+            android:scaleType="fitCenter"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"
+            android:id="@+id/mail_count"
+            android:textColor="#fafaff"
+            android:textSize="17sp"
+            android:layout_centerInParent="true"
+            android:layout_alignParentLeft="false"
+            android:layout_alignParentBottom="false"
+            android:layout_alignBaseline="@+id/imageView3"
+            android:layout_alignLeft="@+id/imageView3"
+            android:layout_alignRight="@+id/imageView3"
+            android:gravity="center"
+            android:layout_alignBottom="@+id/imageView3"
+            android:visibility="invisible" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/fragment_pager"
+        android:layout_weight="1"></FrameLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp">
+
+        <ImageButton
+            android:layout_width="128px"
+            android:layout_height="128px"
+            android:id="@+id/imageButton"
+            android:src="@drawable/left_drawable"
+            android:scaleType="fitCenter"
+            android:background="@android:color/transparent" />
+
+        <View android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+
+        <ImageButton
+            android:layout_width="128px"
+            android:layout_height="128px"
+            android:id="@+id/imageButton2"
+            android:src="@drawable/right_drawable"
+            android:scaleType="fitCenter"
+            android:background="@android:color/transparent" />
+    </LinearLayout>
+</LinearLayout>
